@@ -1,0 +1,194 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "external",
+					"childIndexes" : 
+					[
+						2,
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-external-Debug-d8969718d56d94ae4e32.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "external",
+					"targetIndexes" : 
+					[
+						0,
+						3
+					]
+				},
+				{
+					"build" : "external/glfw-3.2.1",
+					"childIndexes" : 
+					[
+						3
+					],
+					"jsonFile" : "directory-external.glfw-3.2.1-Debug-d05b5b3f6878428a5321.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "external/glfw-3.2.1"
+				},
+				{
+					"build" : "external/glfw-3.2.1/src",
+					"jsonFile" : "directory-external.glfw-3.2.1.src-Debug-ec9e5386ddd3b61cee57.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.12"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "external/glfw-3.2.1/src",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "external/Simple-OpenGL-Image-Library",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-external.Simple-OpenGL-Image-Library-Debug-c6286605d592983f5aa9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.6"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "external/Simple-OpenGL-Image-Library",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "VVR_OGL_LABORATORY",
+					"targetIndexes" : 
+					[
+						0,
+						2,
+						3
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2,
+						3
+					],
+					"name" : "GLFW",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "SOIL",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "GLEW_1130::@89556154f30252d09d22",
+					"jsonFile" : "target-GLEW_1130-Debug-fd2bce274badd45c18e5.json",
+					"name" : "GLEW_1130",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "SOIL::@920775bbc750974e1e78",
+					"jsonFile" : "target-SOIL-Debug-353a7d5b221481ee2285.json",
+					"name" : "SOIL",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Space_Golf_Initialized::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Space_Golf_Initialized-Debug-df9a69acfc89d38a1465.json",
+					"name" : "Space_Golf_Initialized",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "TINYXML2::@89556154f30252d09d22",
+					"jsonFile" : "target-TINYXML2-Debug-60538444f299eadffd72.json",
+					"name" : "TINYXML2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "glfw::@4cb2830a7239d3fc369d",
+					"jsonFile" : "target-glfw-Debug-01d33f6d2a1df1bd6ade.json",
+					"name" : "glfw",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/TeoSkyBlue/source/repos/Space_Golf_Initialized/out/build/x64-Debug",
+		"source" : "C:/Users/TeoSkyBlue/source/repos/Space_Golf_Initialized"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

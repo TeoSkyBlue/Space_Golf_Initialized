@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h2 id="introduction">Introduction</h2>
+<p>All tutorials can be built on Windows, Linux and Mac. For all these platforms, the procedure is roughly the same:</p>
+<ul>
+<li>Update your drivers!</li>
+<li>Download a compiler, if you don’t already have one.</li>
+<li>Install CMake</li>
+<li>Download the source code</li>
+<li>Generate a project using CMake</li>
+<li>Build the project using your compiler</li>
+</ul>
+<p>Detailed procedures will now be given for each platform. Adaptations may be required. If unsure, read the instruction for Windows and try to adapt them.</p>
+<h2 id="building-on-windows">Building on Windows</h2>
+<ul>
+<li>Updating your drivers should be easy. Just go to NVIDIA’s or AMD’s website and download the drivers. If unsure about your GPU model : Control Panel -&gt; System and Security -&gt; System -&gt; Device Manager -&gt; Display adapter. If you have an integrated Intel GPU, drivers are usually provided by your OEM (Dell, HP, …).</li>
+<li>We suggest using Visual Studio 2017 Express for Desktop as a compiler. You can download it for free <a href="https://www.visualstudio.com/en-US/products/visual-studio-express-vs">here</a>. MAKE SURE YOU CHOOSE CUSTOM INSTALLATION AND CHECK C++. If you prefer using MinGW, we recommend using <a href="http://qt-project.org/">Qt Creator</a>. Install whichever you want. Subsequent steps will be explained with Visual Studio, but should be similar with any other IDE.</li>
+<li>Download <a href="http://www.cmake.org/cmake/resources/software.html">CMake</a>from here and install it</li>
+<li><a href="http://www.opengl-tutorial.org/download/">Download the source code</a> and unzip it, for instance in C:\Users\XYZ\Projects\OpenGLTutorials\ .</li>
+<li><p>Launch CMake. In the first line, navigate to the unzipped folder. If unsure, choose the folder that contains the CMakeLists.txt file. In the second line, enter where you want all the compiler’s stuff to live. For instance, you can choose C:\Users\XYZ\Projects\OpenGLTutorials-build-Visual2017-64bits\, or C:\Users\XYZ\Projects\OpenGLTutorials\build\Visual2017-32bits. Notice that it can be anywhere, not necessarily in the same folder. <img src="fig/CMake.png" /></p></li>
+<li>Click on the Configure button. Since this is the first time you configure the project, CMake will ask you which compiler you would like to use. Choose wisely depending on step 1. If you have a 64 bit Windows, you can choose 64 bits; if you don’t know, choose 32 bits.</li>
+<li>Click on Configure until all red lines disappear. Click on Generate. Your Visual Studio project is now created. You can now forget about CMake.</li>
+<li><p>Open C:\Users\XYZ\Projects\OpenGLTutorials-build-Visual2010-32bits. You will see a Tutorials.sln file : open it with Visual Studio. <img src="fig/directories.png" /></p></li>
+</ul>
+<p>In the <em>Build</em> menu, click <em>Build All</em>. Every tutorial and dependency will be compiled. Each executable will also be copied back into C:\Users\XYZ\Projects\OpenGLTutorials\ . Hopefuly no error occurs. <img src="fig/visual_2010.png" /></p>
+<ul>
+<li>Open C:\Users\XYZ\Projects\OpenGLTutorials\playground, and launch playground.exe. A black window should appear. <img src="fig/empty_window.png" /></li>
+</ul>
+<p>You can also launch any tutorial from inside Visual Studio. Right-click on Playground once, “Choose as startup project”. You can now debug the code by pressing F5.</p>
+<div class="figure">
+<img src="fig/StartupProject.png" />
+
+</div>
+<h2 id="building-on-linux">Building on Linux</h2>
+<p>They are so many Linux variants out there that it’s impossible to list every possible platform. Adapt if required, and don’t hesitate to read your distribution’s documentation.</p>
+<ul>
+<li>Install the latest drivers. We highly recommend the closed-source binary drivers. It’s not GNU or whatever, but they work. If your distribution doesn’t provide an automatic install, try <a href="http://help.ubuntu.com/community/BinaryDriverHowto">Ubuntu’s guide</a>.</li>
+<li>Install all needed compilers, tools &amp; libs. Complete list is : <em>cmake make g++ libx11-dev libxi-dev libgl1-mesa-dev libglu1-mesa-dev libxrandr-dev libxext-dev libxcursor-dev libxinerama-dev libxi-dev</em> . Use <code class="highlighter-rouge">sudo apt-get install *****</code> or <code class="highlighter-rouge">su &amp;&amp; yum install ******</code>.</li>
+<li><a href="http://www.opengl-tutorial.org/download/">Download the source code</a> and unzip it, for instance in ~/Projects/OpenGLTutorials/</li>
+<li><p>cd in ~/Projects/OpenGLTutorials/ and enter the following commands :</p></li>
+<li>mkdir build</li>
+<li>cd build</li>
+<li><p>cmake ..</p></li>
+<li>A makefile has been created in the build/ directory.</li>
+<li>type “make all”. Every tutorial and dependency will be compiled. Each executable will also be copied back into ~/Projects/OpenGLTutorials/ . Hopefuly no error occurs.</li>
+<li><p>Open ~/Projects/OpenGLTutorials/playground, and launch ./playground. A black window should appear.</p></li>
+</ul>
+<p>Note that you really should use an IDE like <a href="http://qt-project.org/">Qt Creator</a>. In particular, this one has built-in support for CMake, and it will provide a much nicer experience when debugging. Here are the instructions for QtCreator :</p>
+<ul>
+<li>In QtCreator, go to File-&gt;Tools-&gt;Options-&gt;Compile&amp;Execute-&gt;CMake</li>
+<li>Set the path to CMake. This is most probably /usr/bin/cmake</li>
+<li>File-&gt;Open Project; Select tutorials/CMakeLists.txt</li>
+<li>Select a build directory, preferably outside the tutorials folder</li>
+<li>Optionally set -DCMAKE_BUILD_TYPE=Debug in the parameters box. Validate.</li>
+<li>Click on the hammer on the bottom. The tutorials can now be launched from the tutorials/ folder.</li>
+<li>To run the tutorials from QtCreator, click on Projects-&gt;Execution parameters-&gt;Working Directory, and select the directory where the shaders, textures &amp; models live. Example for tutorial 2 : ~/opengl-tutorial/tutorial02_red_triangle/</li>
+</ul>
+<h2 id="building-on-mac">Building on Mac</h2>
+<p>The procedure is very similar to Windows’ (Makefiles are also supported, but won’t be explained here) :</p>
+<ul>
+<li>Install XCode from the Mac App Store</li>
+<li><a href="http://www.cmake.org/cmake/resources/software.html">Download CMake</a>, and install the .dmg . You don’t need to install the command-line tools.</li>
+<li><a href="http://www.opengl-tutorial.org/download/">Download the source code</a> and unzip it, for instance in ~/Projects/OpenGLTutorials/ .</li>
+<li>Launch CMake (Applications-&gt;CMake). In the first line, navigate to the unzipped folder. If unsure, choose the folder that contains the CMakeLists.txt file. In the second line, enter where you want all the compiler’s stuff to live. For instance, you can choose ~/Projects/OpenGLTutorials_bin_XCode/. Notice that it can be anywhere, not necessarily in the same folder.</li>
+<li>Click on the Configure button. Since this is the first time you configure the project, CMake will ask you which compiler you would like to use. Choose Xcode.</li>
+<li>Click on Configure until all red lines disappear. Click on Generate. Your Xcode project is now created. You can forget about CMake.</li>
+<li>Open ~/Projects/OpenGLTutorials_bin_XCode/ . You will see a Tutorials.xcodeproj file : open it.</li>
+<li>Select the desired tutorial to run in Xcode’s Scheme panel, and use the Run button to compile &amp; run :</li>
+</ul>
+<div class="figure">
+<img src="fig/Xcode-projectselection.png" />
+
+</div>
+<h2 id="note-for-codeblocks">Note for Code::Blocks</h2>
+<p>Due to 2 bugs (one in C::B, one in CMake), you have to edit the command-line in Project-&gt;Build Options-&gt;Make commands, as follows :</p>
+<div class="figure">
+<img src="fig/CodeBlocksFix.png" />
+
+</div>
+<p>You also have to setup the working directory yourself : Project-&gt;Properties -&gt; Build targets -&gt; tutorial N -&gt; execution working dir ( it’s src_dir/tutorial_N/ ).</p>
+</body>
+</html>

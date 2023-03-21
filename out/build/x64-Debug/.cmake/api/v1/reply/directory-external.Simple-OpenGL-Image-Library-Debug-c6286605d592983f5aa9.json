@@ -1,0 +1,66 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"external/Simple-OpenGL-Image-Library/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 28,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 31,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"external/Simple-OpenGL-Image-Library/SOIL_d.lib"
+			],
+			"targetId" : "SOIL::@920775bbc750974e1e78",
+			"targetIndex" : 1,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include/SOIL",
+			"paths" : 
+			[
+				"external/Simple-OpenGL-Image-Library/include/SOIL.h",
+				"external/Simple-OpenGL-Image-Library/include/image_DXT.h",
+				"external/Simple-OpenGL-Image-Library/include/image_helper.h",
+				"external/Simple-OpenGL-Image-Library/include/stb_image_aug.h",
+				"external/Simple-OpenGL-Image-Library/include/stbi_DDS_aug.h",
+				"external/Simple-OpenGL-Image-Library/include/stbi_DDS_aug_c.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "external/Simple-OpenGL-Image-Library",
+		"source" : "external/Simple-OpenGL-Image-Library"
+	}
+}
