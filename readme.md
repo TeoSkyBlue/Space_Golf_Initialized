@@ -4,18 +4,20 @@ Introduction
 This project was the beginning of my journey in the wondrous world of 
 Computer Graphics and 3D rendering. It presents most of the knowledge gained
 during a 7nth semester course in the department of Electrical and Computer
-Engineering of the University of Patras. Techniques at work here include:
-    -Texturing
-    -Material based Rendering
-    -Phong model for diffuse and specular illumination
-    -Shadowmaps
-    -User keyboard/mouse interaction
-    -Full 3D camera using Euler angles(hey, first project. mbmer?)
-    -Golf ball physics simulation using quaternions and collision handling
-    using a 'sweep and prune' approach
-    -Instanced Drawing of more than 6000 items accounting for over 6.000.000 vertices!
-    -Basic imGui integration with frametime limiter and options
-	-CPU-side particle generation utilizing multiple cores
+Engineering of the University of Patras.
+
+	Techniques at work here include:
+	    -Texturing
+	    -Material based Rendering
+	    -Phong model for diffuse and specular illumination
+	    -Shadowmaps
+	    -User keyboard/mouse interaction
+	    -Full 3D camera using Euler angles(hey, first project. mbmer?)
+	    -Golf ball physics simulation using quaternions and collision handling
+	    using a 'sweep and prune' approach
+	    -Instanced Drawing of more than 6000 items accounting for over 6.000.000 vertices!
+	    -Basic imGui integration with frametime limiter and options
+	    -CPU-side particle generation utilizing multiple cores(quite inefficiently, but still!)
 	
 	Starting Scene
 	
