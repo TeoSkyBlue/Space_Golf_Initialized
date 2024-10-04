@@ -3,7 +3,7 @@ Introduction
 
 This project was the beginning of my journey in the wondrous world of 
 Computer Graphics and 3D rendering. It presents most of the knowledge gained
-during a 7nth semester course in the department of Electrical and Computer
+during a 7th semester introductory course in the department of Electrical and Computer
 Engineering of the University of Patras.
 
 	Techniques at work here include:
