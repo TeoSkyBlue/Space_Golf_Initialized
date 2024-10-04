@@ -42,9 +42,8 @@ To Build
 If you are so inclined, you too can build this project, provided you have a 
 working visual studio 17(and upwards) installation with a C++17 compiler.
 The following are the steps required for installation on Windows, since 
-at the time of development I did not test on linux or mac platforms, 
-and I do not consider those supported. So:
-
+at the time of development I did not test on linux or mac platforms, I do not consider those supported. So:
+	
 	- Update your drivers!
 	- Install CMake
 	- Download the source code
