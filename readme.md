@@ -8,8 +8,8 @@ Engineering of the University of Patras.
 
 	Techniques at work here include:
 	    -Texturing
-	    -Material based Rendering
-	    -Phong model for diffuse and specular illumination
+	    -Material based rendering
+	    -Phong model for Diffuse and Specular direct illumination
 	    -Shadowmaps
 	    -User keyboard/mouse interaction
 	    -Full 3D camera using Euler angles(hey, first project. mbmer?)
