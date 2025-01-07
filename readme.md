@@ -15,7 +15,7 @@ Engineering of the University of Patras.
 	    -Full 3D camera using Euler angles(hey, first project. mbmer?)
 	    -Golf ball physics simulation using quaternions and collision handling
 	    using a 'sweep and prune' approach
-	    -Instanced Drawing of more than 6000 items accounting for over 6.000.000 vertices!
+	    -Instanced Drawing of more than 6000 items accounting for over 6.000.000 vertices(physics is enabled here too!)
 	    -Basic imGui integration with frametime limiter and options
 	    -CPU-side particle generation utilizing multiple cores(quite inefficiently, but still!)
 	
